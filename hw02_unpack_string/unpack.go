@@ -22,7 +22,7 @@ func Unpack(str string) (string, error) {
 				break
 			}
 
-			var count, _ = strconv.Atoi(string(symbol))
+			count, _ := strconv.Atoi(string(symbol))
 			if count > 0 {
 				newString.WriteString(strings.Repeat(string(curRune), count))
 			}
