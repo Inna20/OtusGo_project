@@ -5,13 +5,13 @@ import (
 	"strings"
 )
 
-// Структура: слово, частота
+// Структура: слово, частота.
 type wordsAndCountStruct struct {
 	word  string
 	count int
 }
 
-// Коллекция, которая реализует интерфейс sort.Interface (которую можно отсортировать с помощью sort.Sort)
+// Коллекция, которая реализует интерфейс sort.Interface (которую можно отсортировать с помощью sort.Sort).
 type WordsAndCountSlice []wordsAndCountStruct
 
 func (s WordsAndCountSlice) Len() int {
@@ -37,7 +37,7 @@ func Top10(str string) []string {
 	wcSlice := getWordsAndCountSlice(words)
 
 	// 3. Отсортировать структуру по количеству, если количество одинаковое - по слову
-	sort.Sort(WordsAndCountSlice(wcSlice))
+	sort.Sort(wcSlice)
 
 	// 4. Получить из слайса структуры слайс результата
 	return formatResult(wcSlice)
